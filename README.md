@@ -1,5 +1,7 @@
 # Kubernetes Demo App
 
+>> https://github.com/quarkus-seminar/2024-lab-minikube
+
 ## Voraussetzungen
 
 *Minikube* und *kubectl* muss in der Konsole gefunden werden.
