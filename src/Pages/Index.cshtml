@@ -1,0 +1,65 @@
+﻿@page
+@model IndexModel
+@section head {
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+            .container div {
+                border: 1px solid gray;
+                border-radius: 5px;
+                padding: 1em;
+            }
+
+        table tr:hover {
+            background-color: linen;
+        }
+    </style>
+}
+<h1>ASP.NET Core funktioniert!</h1>
+<div class="container">
+    <div>
+        <h3>Vehicles</h3>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var v in Model.Vehicles)
+                {
+                    <tr>
+                        <td>@v.Id</td>
+                        <td>@v.Brand</td>
+                        <td>@v.Model</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3>Links</h3>
+        <ul>
+            <li>
+                <a href="/api/vehicles">/api/vehicles</a>
+            </li>
+            <li>
+                <a href="/swagger">/swagger</a>
+            </li>
+        </ul>
+    </div>
+</div>

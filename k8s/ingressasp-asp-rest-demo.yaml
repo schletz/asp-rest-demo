@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: m-schletz
+spec:
+#  entryPoints:
+#    - websecure
+  routes:
+  - kind: Rule
+    match: Host(`m-schletz.cloud.key.fit`)
+    services:
+    - name: asp-rest-demo
+      port: 8080
+#  tls:
+#    secretName: default-ingress-cert
